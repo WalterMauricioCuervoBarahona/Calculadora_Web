@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Calc</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="myScript.js"></script>
+  </head>
+
+  <body>
+      <h1> ESTÁNDAR</h1>
+    <form>
+      <input type="text" value="" class="right" id="texto" disabled>
+    </form>
+    <div>
+       
+    </div>
+    <div class="">
+      <table class="numbers">
+          <tr>
+              <td><button type="button" name="button" id="modulo" onclick="calculate('%')">%</button></td>
+          <td><button type="button" name="button" id="raiz" onclick=" root()">&#8730</button></td>
+          <td><button type="button" name="button" id="cuadrado" onclick="pow(2)">x&#178;</button></td>
+          <td><button type="button" name="button" id="1/x" onclick="oneX()">1&#8260;x</button></td> 
+          
+          </tr>
+          
+          <tr>
+              <td><button type="button" name="button" id="CE" onclick="CE()">CE</button></td>
+              <td><button type="button" name="button" id="C" onclick="C()">C</button></td>
+              <td><button type="button" name="button" id="BORRAR" onclick="deleteCharacter()">&#8656;</button></td>
+              <td><button type="button" name="button" id="DIV" onclick="calculate('/')">&#247</button></td>    
+          </tr>
+          
+        <tr>
+          <td><button type="button" name="button" id="7" onclick="setValue(7)">7</button></td>
+          <td><button type="button" name="button" id="8" onclick="setValue(8)">8</button></td>
+          <td><button type="button" name="button" id="9" onclick="setValue(9)">9</button></td>
+          <td><button type="button" name="button" id="por" onclick="calculate('*')">x</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button" id="6" onclick="setValue(4)">4</button></td>
+          <td><button type="button" name="button" id="5" onclick="setValue(5)">5</button></td>
+          <td><button type="button" name="button" id="4" onclick="setValue(6)">6</button></td>
+          <td><button type="button" name="button" id="menos" onclick="calculate('-')">-</button></td>
+        </tr>
+        <tr>
+          <td><button type="button" name="button" id ="1" onclick="setValue(1)">1</button></td>
+          <td><button type="button" name="button" id ="2" onclick="setValue(2)">2</button></td>
+          <td><button type="button" name="button" id ="3" onclick="setValue(3)">3</button></td>
+          <td><button type="button" name="button" id="mas" onclick="calculate('+')">+</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" name="button" id ="masmenos" onclick="moreLess()">&#177;</button></td>
+          <td><button type="button" name="button" id ="0" onclick="setValue(0)">0</button></td>
+          <td><button type="button" name="button" id ="coma" onclick="setValue('.')">&#8218;</button></td>
+          <td><button type="button" name="button" id="igual" onclick="calculate('=')">=</button></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
