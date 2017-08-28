@@ -1,4 +1,17 @@
 
+var total=0;
+
+function C(){
+    document.getElementById("texto").value = '';
+    total = 0;
+}
+ 
+function deleteCharacter(){    
+    var value = document.getElementById("texto").value;
+    var txt = value.slice(0, value.length -1);
+    $('#texto').val(txt);
+    
+}
 
 function setValue(numberOfButton) {
   var number = numberOfButton;
@@ -13,18 +26,6 @@ function root() {
     }else {
 $('#texto').val("funcion invalida");
 }
-
-}
-
-function C(){
-    document.getElementById("texto").value = '';
-    num = 0;
-}
-
-function deleteCharacter(){
-    var value = document.getElementById("texto").value;
-    var txt = value.slice(0, value.length -1);
-    $('#texto').val(txt);
 }
 
 function moreLess(){
@@ -34,7 +35,6 @@ function moreLess(){
 
 function pow(number){
     var txt = document.getElementById("texto").value;
-    //Math.pow(txt, number);
     $('#texto').val(Math.pow(txt, number));
 }
 
@@ -43,7 +43,21 @@ function oneX(){
     $('#texto').val(1/txt);
 }
 
+function calculate(char){
+    if(char === '='){
+        var num = document.getElementById("texto").value;   
+    total =  eval(num);
+    $('#texto').val(total);               
+    }else if (char === '%') {
+        var txt = document.getElementById("texto").value;
+        var result = txt.split('%');
+        $('#texto').val(result);
+        }   
+}
 
+
+
+/*
 var total=0;
 var num = 0;
 var aux = '';
@@ -96,3 +110,4 @@ function calculate(operation){
         default :
     }     
 }
+*/
